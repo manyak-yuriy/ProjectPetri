@@ -1,0 +1,125 @@
+/*#brain
+{
+	width: 55px;
+	display: block;
+	margin-top: 0px;
+}*/
+
+
+
+#votes_number
+{
+	font-family: "Comic Sans MS", cursive, sans-serif;
+    font-size: 120%;
+	display: block;
+	/*margin-left: 50px;*/
+}
+
+#n_of_unique
+{
+	font-family: "Comic Sans MS", cursive, sans-serif;
+    font-size: 120%;
+	display: block;
+	margin-left: 50px;
+}
+
+.prob_caption
+{
+	font-family: "Comic Sans MS", cursive, sans-serif;
+	//border: 1px solid black;
+	position: static;
+	left: 10px;
+	bottom: 1px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.category-block
+{	
+	position: relative;
+	left:1px;
+	
+	display: inline-block;
+	border-radius: 10px;
+	margin-top: 20px;
+	margin-left: 50px;
+	/*border: 1px solid black;*/
+}
+
+.category-caption
+{
+	font-family: "Comic Sans MS", cursive, sans-serif;
+    font-size: 130%;
+	display: block;
+}
+
+.cup-image, .person-image
+{
+	border-radius: 5px;
+	bottom: 100%;
+	margin-bottom: 20px;
+	margin-top: 5px;
+	margin-right: 5px;
+	
+	position: static;
+	left: 100px;
+	top: 30px;
+}
+
+.cup-person-pair:hover .cup-image
+{
+	transform:rotate3d(5, 1, 0, 360deg) translateX(-20px);
+	transition: transform 1s ease-out;
+	
+}
+
+.person-image
+{
+	width: 120px;
+	border-radius: 15px;
+	opacity: 0.7;
+}
+
+.cup-person-pair:hover .person-image
+{
+	opacity: 1;
+	transition: opacity 500ms ease-out, transform 500ms ease-out;
+	transform:scale(1.4, 1.4);
+}
+
+.leaf-image
+{
+	position: absolute;
+	left: 48px;
+	top: 35px;
+	width: 200px;
+	opacity: 0.8;
+}
+
+.cup-person-pair:hover .leaf-image
+{
+	opacity: 0;
+	transition: opacity 1s;
+	transition-timing-function: ease-out;
+}
+
+.cup-image
+{
+	width: 80px;
+}
+
+.cup-person-pair
+{
+	//border: 1px solid black;
+	display: inline-block;
+	margin-right: 10px;
+	margin-bottom: 10px;
+	
+	position: relative;
+	left: 10px; 
+	top: 10px;
+	
+	width: 300px;
+	/*box-shadow: 5px 1px 5px 3px rgba(1,0,0,0.4);*/
+}
+

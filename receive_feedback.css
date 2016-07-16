@@ -1,0 +1,19 @@
+#gratitude p
+{
+   color: black;
+   font-family: "Comic Sans MS", cursive, sans-serif;
+   font-size: 120%;
+   line-height: 160%;
+   text-indent: 30px;
+}
+
+#gratitude h1
+{
+	font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+#gratitude
+{
+	margin-left: 70px;
+	margin-right: 70px;
+}

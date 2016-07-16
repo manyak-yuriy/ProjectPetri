@@ -1,0 +1,25 @@
+#descr p
+{
+   color: black;
+   font-family: "Comic Sans MS", cursive, sans-serif;
+   font-size: 120%;
+   text-indent: 30px;
+   line-height: 160%;
+}
+
+#descr h1
+{
+	font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+#descr
+{
+	margin-left: 70px;
+	margin-right: 70px;
+	
+	background: rgba(255,255,240,0.5);
+    
+	border-radius: 5px;
+	padding: 10px;
+}
+

@@ -1,0 +1,5 @@
+[
+    "http://iasa.kpi.ua/community-uk/tutors/chair-mmsa/foto/Didkokvska.jpg",
+    "http://iasa.kpi.ua/community-uk/tutors/chair-mmsa/bidyuk/tutors/chair-mmsa/foto/Bydyuk.jpg",
+    123
+]

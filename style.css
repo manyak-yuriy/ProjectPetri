@@ -1,0 +1,105 @@
+#logo
+{
+	margin-top: 5px;
+	width: 45px;
+    height: 45px;
+	margin-left: 10px;
+}
+
+body
+{
+	/*background-color: #BCC6CC;*/
+	/*background-image: url("http://i532.photobucket.com/albums/ee322/Marathongman/SCRAPBOOK%20BACKGROUNDS%20AND%20PAGES/green-ivy-leaves-picture-frame-scrapbook.png");*/
+	background-image: url("http://i532.photobucket.com/albums/ee322/Marathongman/SCRAPBOOK%20BACKGROUNDS%20AND%20PAGES/semi-transparent-white-background-overlay.png");
+	background-repeat: repeat;
+    background-position: right top;
+    background-attachment: fixed;
+	background-size: 100%;
+	
+	background-clip: padding-box;
+	
+	margin-left: 180px;
+	margin-right: 180px;
+	/*border: 1px solid black;*/
+}
+
+a
+{
+	text-decoration: none;
+}
+
+a:active
+{
+	background-color: red/*#6C2DC7*/;
+}
+
+#menu
+{
+	background-color: #3D3C3A;
+	padding: 5px;
+	border-radius: 5px;
+	padding-top: 10px;
+	margin-bottom: 50px;
+}
+
+#menu:hover
+{
+	background-color: black;
+}
+
+#menu-footer
+{
+	background-color: #3D3C3A;
+	padding: 5px;
+	border-radius: 5px;
+	padding-top: 10px;
+	margin-top: 50px;
+	height: 30px;
+	color: white;
+	font-size: 120%;
+	font-family: 'courier new';
+	padding-left: 10px;
+}
+
+#menu-footer:hover
+{
+	background-color: black;
+}
+
+#menu, #menu-footer
+{
+	transition: background-color 1s;
+}
+
+.menu-item
+{
+	font-family: 'courier new';
+	text-align: center;
+	width: auto;
+    height: 50px;
+    padding: 8px;
+	border-radius: 3px;
+	font-size: 200%;
+	
+	position: relative;
+	left: 40px;
+	color: white;
+	
+	margin-right: 30px;
+}
+
+.menu-item:hover
+{
+	background-color: #1569C7;
+	/*border: 1px dotted #254117;*/
+	box-shadow:10px 13px 20px 0 rgba(0,0,0,0.4);
+
+	transition: background-color 1s ease-out, box-shadow 1s ease-out;
+}
+
+.menu-item:active
+{
+	background-color: #6C2DC7;
+	box-shadow:10px 13px 20px 0 rgba(0,0,0,0.8);
+}
+

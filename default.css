@@ -1,0 +1,145 @@
+#accepted_image
+{
+	width: 300px;
+	height: 100px;
+	position: absolute;
+	bottom: 150px;
+	left: 100px;
+	visibility: hidden;
+}
+
+#loader_gif
+{
+	position: absolute;
+	bottom: 200px;
+	left: 190px;
+	visibility: hidden;
+}
+
+
+#next_image
+{
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	visibility: visible;
+	
+	width: 50px;
+	height: 30px;
+}
+
+#next_image:hover
+{
+     background-color: #d8f4ff;
+	 padding: 3px;
+	 border-radius: 7px;
+}
+
+#qarea
+{
+	border-radius: 15px;
+    border: 3px solid #73AD21;
+    margin: auto;
+    width: 500px;
+	height: 410px;
+    padding: 5px;
+    position: relative;
+	
+	background: rgba(255,255,240,0.5);
+}
+
+#img1
+{
+    width: 220px;
+    height: 300px;
+    padding: 2px;
+	visibility: hidden;
+	
+	opacity: 0.7;
+}
+
+#img2
+{
+    width: 220px;
+    height: 300px;
+    padding: 2px;
+	
+	right: 10px;
+	position: absolute;
+	
+	visibility: hidden;
+	
+	opacity: 0.7;
+}
+
+#img1:hover
+{
+    border-radius: 7px;
+    border: 2px outset red;
+	
+	opacity: 1;
+	transition: opacity 1s;
+	transition-timing-function: ease-out;
+}
+
+#img2:hover
+{
+    border-radius: 7px;
+    border: 2px outset red;
+	
+	opacity: 1;
+	transition: opacity 1s;
+	transition-timing-function: ease-out;
+}
+
+#img1
+{
+
+}
+
+#img2
+{
+    
+}
+
+#qarea:hover
+{
+	background: rgba(255,245,245,0.6);
+}
+
+#question_text
+{
+   text-align: center;
+   font-family: "Comic Sans MS", cursive, sans-serif;
+   font-size: 150%;
+   
+   color: black;
+}
+
+#question_text-comp
+{
+   text-align: center;
+   font-family: "Comic Sans MS", cursive, sans-serif;
+   font-size: 150%;
+   
+   color: blue;
+}
+
+#question_text-char
+{
+   text-align: center;
+   font-family: "Comic Sans MS", cursive, sans-serif;
+   font-size: 150%;
+   
+   color: red;
+}
+
+#question_text-mann
+{
+   text-align: center;
+   font-family: "Comic Sans MS", cursive, sans-serif;
+   font-size: 150%;
+   
+   color: green;
+}
+

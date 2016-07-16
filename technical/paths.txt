@@ -1,0 +1,14 @@
+[
+"http://iasa.kpi.ua/community-uk/tutors/chair-mmsa/batienko/tutors/chair-mmsa/foto/Batiyenko.png",
+"http://iasa.kpi.ua/community-uk/tutors/chair-mmsa/bidyuk/tutors/chair-mmsa/foto/Bydyuk.jpg",
+"http://iasa.kpi.ua/community-uk/tutors/chair-mmsa/bondarenko/tutors/chair-mmsa/foto/Bondarenko.jpg",
+"http://iasa.kpi.ua/community-uk/tutors/chair-mmsa/bogdanskiy/tutors/chair-mmsa/foto/Bohdanskyy.jpg",
+"http://iasa.kpi.ua/community-uk/tutors/chair-mmsa/foto/Didkokvska.jpg",
+"http://iasa.kpi.ua/community-uk/tutors/chair-mmsa/kaniovskaya/tutors/chair-mmsa/foto/Kanyovskaya.jpg",
+"http://iasa.kpi.ua/community-uk/tutors/chair-mmsa/malcev/tutors/chair-mmsa/foto/Maltsev.jpg",
+"http://iasa.kpi.ua/community-uk/tutors/chair-mmsa/podkolzin/tutors/chair-mmsa/foto/Podkolzyn.jpg",
+"http://iasa.kpi.ua/community-uk/tutors/chair-mmsa/foto/Tymoshenko.jpg/image_preview",
+"http://iasa.kpi.ua/community-uk/tutors/chair-mmsa/foto/Stus.jpg/image_preview",
+"http://iasa.kpi.ua/community-uk/tutors/chair-mmsa/foto/SHvachko.jpg/image_preview",
+"http://iasa.kpi.ua/community-uk/tutors/chair-mmsa/kasyanov/tutors/chair-mmsa/foto/Kasyanov.jpg"
+]
