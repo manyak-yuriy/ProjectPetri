@@ -48,22 +48,21 @@
 	background: rgba(255,255,240,0.5);
 }
 
-#img1
+#img1, #img2
 {
     width: 220px;
-    height: 300px;
+    height: 230px;
     padding: 2px;
+}
+
+#img1
+{
 	visibility: hidden;
-	
 	opacity: 0.7;
 }
 
 #img2
 {
-    width: 220px;
-    height: 300px;
-    padding: 2px;
-	
 	right: 10px;
 	position: absolute;
 	
