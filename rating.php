@@ -11,15 +11,20 @@
 	<meta charset="UTF-8">
     <title>Rating</title>
 	
+	
 </head>
+
+
+	
+
 
 <body>
 
     <div id="menu">
 	    <img id="logo" alt="atom" src="http://animations.fg-a.com/atom_004rd.gif"> 
-	    <a class="menu-item" style="background-color: #6C2DC7;"><img width="25px" src="http://icons.iconarchive.com/icons/double-j-design/diagram-free/128/bar-chart-icon.png">&nbspRating</a>
+	    <a class="menu-item" style="background-color: #6C2DC7;"><img width="32px" src="http://icons.iconarchive.com/icons/double-j-design/diagram-free/128/bar-chart-icon.png">&nbspRating</a>
 		<a class="menu-item" href="default.php"><img width="25px" src="http://binjiesun.com/images/voteIcon.png">&nbspVote</a>
-		<a class="menu-item" href="about.php"><img width="25px" src="http://www.iconarchive.com/download/i22783/kyo-tux/phuzion/Sign-Info.ico">&nbspAbout</a>
+		<a class="menu-item" href="about.php"><img width="25px" src="http://findicons.com/files/icons/1676/primo/128/info_black.png">&nbspAbout</a>
 		<a class="menu-item" href="feedback.php"><img width="25px" src="http://myexpressions.in/images/contact-icon.png">&nbspFeedback</a>
 	</div>
 	
@@ -72,7 +77,7 @@
 		{
 			for ($j = 0; $j < $n; $j++)
 			{
-				$magic = 10;
+				$magic = 1;
 				$domin[$i][$j] = $magic;
 				$sql = "SELECT count FROM $table_name WHERE first = $i AND second = $j;";
 				$result = $conn->query($sql);
@@ -89,6 +94,10 @@
 		for ($i = 0; $i < $n; $i++)
 			for ($j = 0; $j < $n; $j++)
 				$n_of_votes = $n_of_votes + $domin[$i][$j];
+			
+        $n_of_votes = $n_of_votes  - $n * $n;
+		
+		/*   Old metrics begins
 		
 		$probs = array();
 		for ($i = 0; $i < $n; $i++)
@@ -115,18 +124,34 @@
 				if ($probs_s[$i][$j] < 0)
 					$probs_s[$i][$j] = 0;
 			}
-			
+		Old metrics ends   */ 
 		// output_matr
 		/*
 		for ($i = 0; $i < $n; $i++)
 		{
 			//printf("%5s&nbsp", $arrSources[$i]);
 			for ($j = 0; $j < $n; $j++)
-				printf("%5.2f&nbsp", $probs_s[$i][$j]);
+				printf("%5.2f&nbsp", $domin[$i][$j]);
 			echo "<br/>";
 		}
 		*/	
+		
 		$fuzzy_set = array();
+		
+		for ($i = 0; $i < $n; $i++)
+		{
+			$in_favor = 0;
+			for ($j = 0; $j < $n; $j++)
+			    $in_favor = $in_favor + $domin[$i][$j];
+			
+			$against = 0;
+			for ($j = 0; $j < $n; $j++)
+			    $against = $against + $domin[$j][$i];
+			
+			$fuzzy_set[$i] = $in_favor / ($in_favor + $against);
+		}	
+		
+		/*
 		for ($j = 0; $j < $n; $j++)
 		{
 			$max = 0;
@@ -134,7 +159,11 @@
 				if ($probs_s[$i][$j] > $max)
 					$max = $probs_s[$i][$j];
 			$fuzzy_set[$j] = 1 - $max;
-		}
+		} */
+		
+		
+		
+	     
 		
 		// output fuzzy_set
 		/*
@@ -180,7 +209,7 @@
 			<br/>
 	    </p>
 	    <div class="category-caption">
-		    <strong style="text-align: center; color: blue;">Competence</strong>
+		    <strong style="text-align: center; color: blue;">Интеллект</strong>
 	    </div>
 	
 	    <div class="cup-person-pair">
@@ -189,17 +218,18 @@
 			<img class="leaf-image" id="leaf1" src="http://www.clker.com/cliparts/q/M/C/d/X/e/ely-hi.png">
 			<br/>
 			<div class="prob_caption">
-			    <!--Probability: <?php echo number_format($fuzzy_set[$golden_index], 2) ?>-->
+			    Probability: <?php echo number_format(100*$fuzzy_set[$golden_index], 1) ?>%
 			</div>
 	    </div>
-	
+		
+		
 	    <div class="cup-person-pair">
 	        <img class="cup-image" id="silver_cup" alt="Second Prize" src="http://i.imgur.com/uxSjHxP.png">
 	        <img class="person-image" id="person2" src='<?php echo $arrSources[$silver_index] ?>'>
 			<img class="leaf-image" id="leaf2" src="http://www.clker.com/cliparts/q/M/C/d/X/e/ely-hi.png">
 			<br/>
 			<div class="prob_caption">
-			    <!--Probability: <?php echo number_format($fuzzy_set[$silver_index], 2) ?>-->
+			    Probability: <?php echo number_format(100*$fuzzy_set[$silver_index], 1) ?>%
 			</div>
 	    </div>
 	
@@ -209,7 +239,7 @@
 			<img class="leaf-image" id="leaf3" src="http://www.clker.com/cliparts/q/M/C/d/X/e/ely-hi.png">
 			<br/>
 			<div class="prob_caption">
-			    <!--Probability: <?php echo number_format($fuzzy_set[$bronze_index], 2) ?>-->
+			    Probability: <?php echo number_format(100*$fuzzy_set[$bronze_index], 1) ?>%
 			</div>
 	    </div>
 		<hr/>
@@ -225,7 +255,7 @@
 			<br/>
 	    </p>
 	    <div class="category-caption">
-		    <strong style="text-align: center; color: red;">Charisma</strong>
+		    <strong style="text-align: center; color: red;">Сексуальность</strong>
 	    </div>
 	
 	    <div class="cup-person-pair">
@@ -234,7 +264,7 @@
 			<img class="leaf-image" id="leaf1" src="http://www.clker.com/cliparts/q/M/C/d/X/e/ely-hi.png">
 			<br/>
 			<div class="prob_caption">
-			    <!--Probability: <?php echo number_format($fuzzy_set[$golden_index], 2) ?>-->
+			    Probability: <?php echo number_format(100*$fuzzy_set[$golden_index], 1) ?>%
 			</div>
 	    </div>
 	
@@ -244,7 +274,7 @@
 			<img class="leaf-image" id="leaf1" src="http://www.clker.com/cliparts/q/M/C/d/X/e/ely-hi.png">
 			<br/>
 			<div class="prob_caption">
-			    <!--Probability: <?php echo number_format($fuzzy_set[$silver_index], 2) ?>-->
+			    Probability: <?php echo number_format(100*$fuzzy_set[$silver_index], 1) ?>%
 			</div>
 	    </div>
 	
@@ -254,7 +284,7 @@
 			<img class="leaf-image" id="leaf1" src="http://www.clker.com/cliparts/q/M/C/d/X/e/ely-hi.png">
 			<br/>
 			<div class="prob_caption">
-			    <!--Probability: <?php echo number_format($fuzzy_set[$bronze_index], 2) ?>-->
+			    Probability: <?php echo number_format(100*$fuzzy_set[$bronze_index], 1) ?>%
 			</div>
 	    </div>
 		<hr/> 
@@ -270,7 +300,7 @@
 			<br/>
 	    </p>
 	    <div class="category-caption">
-		    <strong style="text-align: center; color: green;">Manners</strong>
+		    <strong style="text-align: center; color: green;">Вероятность прихода к успеху</strong>
 	    </div>
 	
 	    <div class="cup-person-pair">
@@ -279,7 +309,7 @@
 			<img class="leaf-image" id="leaf1" src="http://www.clker.com/cliparts/q/M/C/d/X/e/ely-hi.png">
 			<br/>
 			<div class="prob_caption">
-			    <!--Probability: <?php echo number_format($fuzzy_set[$golden_index], 2) ?>-->
+			    Probability: <?php echo number_format(100*$fuzzy_set[$golden_index], 2) ?>%
 			</div>
 	    </div>
 	
@@ -289,7 +319,7 @@
 			<img class="leaf-image" id="leaf1" src="http://www.clker.com/cliparts/q/M/C/d/X/e/ely-hi.png">
 			<br/>
 			<div class="prob_caption">
-			    <!--Probability: <?php echo number_format($fuzzy_set[$silver_index], 2) ?>-->
+			    Probability: <?php echo number_format(100*$fuzzy_set[$silver_index], 2) ?>%
 			</div>
 	    </div>
 	
@@ -299,7 +329,7 @@
 			<img class="leaf-image" id="leaf1" src="http://www.clker.com/cliparts/q/M/C/d/X/e/ely-hi.png">
 			<br/>
 			<div class="prob_caption">
-			    <!--Probability: <?php echo number_format($fuzzy_set[$bronze_index], 2) ?>-->
+			    Probability: <?php echo number_format(100*$fuzzy_set[$bronze_index], 2) ?>%
 			</div>
 	    </div>
 		<hr/> 
@@ -312,4 +342,12 @@
 </body>	
 
 <?php $conn->close(); ?>
+
+
+
 </html>
+
+
+<script>
+    load_back();
+</script>

@@ -1,17 +1,24 @@
 <?php
 $arrSources = array(
-/*0*/   "http://iasa.kpi.ua/community-uk/tutors/chair-mmsa/batienko/tutors/chair-mmsa/foto/Batiyenko.png",
-/*1*/   "http://iasa.kpi.ua/community-uk/tutors/chair-mmsa/bidyuk/tutors/chair-mmsa/foto/Bydyuk.jpg",
-/*2*/   "http://iasa.kpi.ua/community-uk/tutors/chair-mmsa/bondarenko/tutors/chair-mmsa/foto/Bondarenko.jpg",
-/*3*/   "http://iasa.kpi.ua/community-uk/tutors/chair-mmsa/bogdanskiy/tutors/chair-mmsa/foto/Bohdanskyy.jpg",
-/*4*/   "http://iasa.kpi.ua/community-uk/tutors/chair-mmsa/foto/Didkokvska.jpg",
-/*5*/   "http://iasa.kpi.ua/community-uk/tutors/chair-mmsa/kaniovskaya/tutors/chair-mmsa/foto/Kanyovskaya.jpg",
-/*6*/   "http://iasa.kpi.ua/community-uk/tutors/chair-mmsa/malcev/tutors/chair-mmsa/foto/Maltsev.jpg",
-/*7*/   "http://iasa.kpi.ua/community-uk/tutors/chair-mmsa/podkolzin/tutors/chair-mmsa/foto/Podkolzyn.jpg",
-"http://iasa.kpi.ua/community-uk/tutors/chair-mmsa/foto/Tymoshenko.jpg/image_preview",
-"http://iasa.kpi.ua/community-uk/tutors/chair-mmsa/foto/Stus.jpg/image_preview",
-"http://iasa.kpi.ua/community-uk/tutors/chair-mmsa/foto/SHvachko.jpg/image_preview",
-"http://iasa.kpi.ua/community-uk/tutors/chair-mmsa/kasyanov/tutors/chair-mmsa/foto/Kasyanov.jpg"
+/*0*/   "new_img/erokhin.jpg",
+/*1*/   "new_img/deundiak.jpg",
+/*2*/   "new_img/fridman.jpg",
+/*3*/   "new_img/gritsaiuk.jpg",
+/*4*/   "new_img/belas.jpg",
+/*5*/   "new_img/mikhailuk.png",
+/*6*/   
+/*7*/   "new_img/manyak.png",
+"new_img/livinskiy.jpg",
+"new_img/puhachev.jpg",
+"new_img/morugiy.jpg",
+"new_img/rohovoy.jpg",
+"new_img/sagan.jpg",
+"new_img/skorohod.jpg",
+"new_img/sliota.jpg",
+"new_img/tarasiuk.jpg",
+"new_img/varava.jpg",
+"new_img/yakovets.jpg", 
+"new_img/romanko.jpg"
 );
 
     $servername = 'fdb5.freehostingeu.com';

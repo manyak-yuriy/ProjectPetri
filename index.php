@@ -6,26 +6,40 @@
     <link rel="stylesheet" type="text/css" href="style.css">
 	
 	<link rel="stylesheet" type="text/css" href="default.css">
-    <title>Voting</title>
+	
+	<link rel="icon" href="http://binjiesun.com/images/voteIcon.png">
+	<meta charset="UTF-8">
+    <title>Vote</title>
 	
 </head>
 
-<script>
-	                        
-</script>
-
 <body>
+
+    <script>
+	        onload = function()
+			{
+				//var elm = document.getElementById("leaf1");
+                url = 'http://www.clker.com/cliparts/q/M/C/d/X/e/ely-hi.png';
+				
+				var tmp = new Image();
+				/*tmp.onload = function() 
+				{
+					elm.src = 'url("' + url + '")';
+				};*/
+				tmp.src = url;
+			}
+                
+    </script>
 
     <div id="menu">
 	    <img id="logo" alt="atom" src="http://animations.fg-a.com/atom_004rd.gif"> 
-	    <a class="menu-item" href="rating.php">Rating</a>
-		<a class="menu-item" style="background-color: #6C2DC7;">Vote</a>
-		<a class="menu-item" href="about.php">About</a>
-		<a class="menu-item" href="feedback.php">Contact us</a>
+	    <a class="menu-item" href="rating.php"><img width="25px" src="http://icons.iconarchive.com/icons/double-j-design/diagram-free/128/bar-chart-icon.png">&nbspRating</a>
+		<a class="menu-item" style="background-color: #6C2DC7;"><img width="32px" src="http://binjiesun.com/images/voteIcon.png">&nbspVote</a>
+		<a class="menu-item" href="about.php"><img width="25px" src="http://findicons.com/files/icons/1676/primo/128/info_black.png">&nbspAbout</a>
+		<a class="menu-item" href="feedback.php"><img width="25px" src="http://myexpressions.in/images/contact-icon.png">&nbspFeedback</a>
 	</div>
  
     <div id="qarea">
-
           <h3 id="question_text">  </h3>
           <img id="next_image" alt = "Next->" src="http://i.imgur.com/ekOT9KX.png" onclick = "load_next()"> <br\>
   
@@ -39,9 +53,9 @@
 	
     </div>
 	
-	<div id="menu-footer">
-	   
-	</div>
+	<?php
+	    require 'parts/lower_bar.php';
+	?>
 
 </body>
 
@@ -49,9 +63,6 @@
 
     onload = function()
 	{
-		var d = new Date();
-	    document.getElementById("menu-footer").innerHTML = "&copy ProjectPetri " + d.getFullYear();
-			
 		if (!XMLHttpRequest)
 		{
 			alert("You are using Internet Explorer! Go get a normal browser first.");
@@ -110,6 +121,10 @@
 				var img1_preload = new Image();
 				var img2_preload = new Image();
 				
+				
+				
+				
+				
 				img1_preload.onload = function()
 				{
 					document.getElementById("img1").src = this.src;
@@ -123,27 +138,28 @@
 					document.getElementById("loader_gif").style.visibility = 'hidden';
 					document.getElementById("img2").style.visibility = 'visible';
 				}
+				
 				img1_preload.src = links[0];
 				img2_preload.src = links[1];
                 
 				id = links[2];
 				
-				var question = "Who is more ";
+				var question = "Кто из пацанов";
 				switch (links[3])
 				{
 					case "1":
 					{
-						question = question + "<span id = 'question_text-comp'> competent</span>";
+						question = question + "<span id = 'question_text-comp'> умнее</span>";
 						break;
 					}
 					case "2":
 					{
-						question = question + "<span id = 'question_text-char'> charismatic</span>";
+						question = question + "<span id = 'question_text-char'> сексуальнее</span>";
 						break;
 					}
 					case "3":
 				    {
-						question = question + "<span id = 'question_text-mann'> well-mannered</span>";
+						question = question + "<span id = 'question_text-mann'> придёт к упеху</span>";
 						break;
 					}
 					default:
@@ -182,6 +198,7 @@
 		else
 			alert("Images are not loaded yet!");
 	}
+	
 	
 	setTimeout(load_back, 2000);
 </script>

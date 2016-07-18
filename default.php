@@ -9,7 +9,7 @@
 	
 	<link rel="icon" href="http://binjiesun.com/images/voteIcon.png">
 	<meta charset="UTF-8">
-    <title>Voting</title>
+    <title>Vote</title>
 	
 </head>
 
@@ -18,8 +18,8 @@
     <div id="menu">
 	    <img id="logo" alt="atom" src="http://animations.fg-a.com/atom_004rd.gif"> 
 	    <a class="menu-item" href="rating.php"><img width="25px" src="http://icons.iconarchive.com/icons/double-j-design/diagram-free/128/bar-chart-icon.png">&nbspRating</a>
-		<a class="menu-item" style="background-color: #6C2DC7;"><img width="25px" src="http://binjiesun.com/images/voteIcon.png">&nbspVote</a>
-		<a class="menu-item" href="about.php"><img width="25px" src="http://www.iconarchive.com/download/i22783/kyo-tux/phuzion/Sign-Info.ico">&nbspAbout</a>
+		<a class="menu-item" style="background-color: #6C2DC7;"><img width="32px" src="http://binjiesun.com/images/voteIcon.png">&nbspVote</a>
+		<a class="menu-item" href="about.php"><img width="25px" src="http://findicons.com/files/icons/1676/primo/128/info_black.png">&nbspAbout</a>
 		<a class="menu-item" href="feedback.php"><img width="25px" src="http://myexpressions.in/images/contact-icon.png">&nbspFeedback</a>
 	</div>
  
@@ -47,6 +47,8 @@
 
     onload = function()
 	{
+		   
+				
 			
 		if (!XMLHttpRequest)
 		{
@@ -106,6 +108,10 @@
 				var img1_preload = new Image();
 				var img2_preload = new Image();
 				
+				
+				
+				
+				
 				img1_preload.onload = function()
 				{
 					document.getElementById("img1").src = this.src;
@@ -119,27 +125,28 @@
 					document.getElementById("loader_gif").style.visibility = 'hidden';
 					document.getElementById("img2").style.visibility = 'visible';
 				}
+				
 				img1_preload.src = links[0];
 				img2_preload.src = links[1];
                 
 				id = links[2];
 				
-				var question = "Who is more ";
+				var question = "Кто из пацанов";
 				switch (links[3])
 				{
 					case "1":
 					{
-						question = question + "<span id = 'question_text-comp'> competent</span>";
+						question = question + "<span id = 'question_text-comp'> умнее</span>";
 						break;
 					}
 					case "2":
 					{
-						question = question + "<span id = 'question_text-char'> charismatic</span>";
+						question = question + "<span id = 'question_text-char'> сексуальнее</span>";
 						break;
 					}
 					case "3":
 				    {
-						question = question + "<span id = 'question_text-mann'> well-mannered</span>";
+						question = question + "<span id = 'question_text-mann'> придёт к упеху</span>";
 						break;
 					}
 					default:
@@ -178,6 +185,9 @@
 		else
 			alert("Images are not loaded yet!");
 	}
+	
+	
+	load_back();
 </script>
 
 </html>

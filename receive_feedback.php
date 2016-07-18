@@ -66,3 +66,8 @@ $conn->close();
 
 
 </html>
+
+
+<script>
+    load_back();
+</script>
