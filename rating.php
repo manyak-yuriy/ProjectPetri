@@ -195,7 +195,7 @@
 ?>
   	<p id="n_of_unique">
 	    Unique users: 
-	    <?php echo 10+$n_of_unique ?>
+	    <?php echo $n_of_unique ?>
 		<br/>
 	</p>
 	
