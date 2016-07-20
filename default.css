@@ -1,3 +1,18 @@
+#access_num
+{
+	font-family: "Comic Sans MS", cursive, sans-serif;
+    font-size: 120%;
+	margin-left: 5px;
+}
+
+#access_caption
+{
+	font-family: "Comic Sans MS", cursive, sans-serif;
+    font-size: 120%;
+	margin-left: 5px;
+}
+
+
 #accepted_image
 {
 	width: 300px;

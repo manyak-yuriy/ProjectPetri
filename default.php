@@ -33,9 +33,13 @@
 		  <img id="accepted_image" alt = "Accepted!" src="http://www.livinglifeonthevine.com/wp-content/uploads/2014/09/Accept.png">
 		  <img id="loader_gif" alt = "Loading..." src="http://i.imgur.com/r3XJYzU.gif">
 
-          <br\>
-	
     </div>
+	
+	</br>
+	</br>
+	
+	<span id="access_caption"> Total accesses: </span>
+	<span id="access_num"> </span>
 	
 	<?php
 	    require 'parts/lower_bar.php';
@@ -44,10 +48,13 @@
 </body>
 
 <script>
+   
+
 
     onload = function()
 	{
-		   
+		load_access();
+		setInterval(load_access, 3000);
 				
 			
 		if (!XMLHttpRequest)
@@ -89,6 +96,27 @@
 		loadimg();
 	}
 	
+	
+   function load_access()
+   {
+	    var xmlhttp = new XMLHttpRequest();
+	    xmlhttp.onreadystatechange = function() 
+        {
+			if (xmlhttp.readyState == 4 && xmlhttp.status == 200) 
+            {
+				var resp = xmlhttp.responseText;
+				//alert(resp);
+				var counterObj = JSON.parse(resp);
+				var counter = counterObj['cnt'];
+				document.getElementById('access_num').innerHTML = counter;
+			}
+			
+			
+		}
+		xmlhttp.open("GET", "accessCnt.php", true);
+        xmlhttp.send();
+   }
+   
     function loadimg() 
     {
         var xmlhttp = new XMLHttpRequest();
@@ -107,10 +135,6 @@
 				// preload two images into memory
 				var img1_preload = new Image();
 				var img2_preload = new Image();
-				
-				
-				
-				
 				
 				img1_preload.onload = function()
 				{
