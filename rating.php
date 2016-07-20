@@ -207,7 +207,7 @@
 			Total number of votes: 
 	    </p>
 		<span class="votes_value" id = "vv1"> </span>
-		</br>
+		</br></br>
 	    <div class="category-caption">
 		    <strong style="text-align: center; color: blue;">Интеллект</strong>
 	    </div>
@@ -254,6 +254,7 @@
 	    </p>
 		<span class="votes_value" id = "vv2"> </span>
 		</br>
+		</br>
 	    <div class="category-caption">
 		    <strong style="text-align: center; color: red;">Сексуальность</strong>
 	    </div>
@@ -298,6 +299,7 @@
 			Total number of votes: 
 	    </p>
 		<span class="votes_value" id = "vv3"> </span>
+		</br>
 		</br>
 	    <div class="category-caption">
 		    <strong style="text-align: center; color: green;">Вероятность прихода к успеху</strong>
@@ -370,9 +372,39 @@
 				//alert(resp);
 				var countsObj = JSON.parse(str);
 				
-				document.getElementById('vv1').innerHTML = countsObj[0];
-				document.getElementById('vv2').innerHTML = countsObj[1];
-				document.getElementById('vv3').innerHTML = countsObj[2];
+				
+				if (document.getElementById('vv1').innerHTML != countsObj[0])
+				{
+					document.getElementById('vv1').innerHTML = countsObj[0];
+				    document.getElementById('vv1').style.color = "red";
+					document.getElementById('vv1').style.fontSize = "larger";
+				}
+				
+				if (document.getElementById('vv2').innerHTML != countsObj[1])
+				{
+				    document.getElementById('vv2').innerHTML = countsObj[1];
+				    document.getElementById('vv2').style.color = "red";
+					document.getElementById('vv2').style.fontSize = "larger";
+				}
+				
+				if (document.getElementById('vv3').innerHTML != countsObj[2])
+				{
+					document.getElementById('vv3').innerHTML = countsObj[2];
+				    document.getElementById('vv3').style.color = "red";
+					document.getElementById('vv3').style.fontSize = "larger";
+				}
+				
+				
+				setTimeout(function()
+								    {
+					                   document.getElementById('vv1').style.color = "black";
+									   document.getElementById('vv1').style.fontSize = "normal";
+									   document.getElementById('vv2').style.color = "black";
+									   document.getElementById('vv2').style.fontSize = "normal";
+									   document.getElementById('vv3').style.color = "black";
+									   document.getElementById('vv3').style.fontSize = "normal";
+									}
+				           , 500);
 			}
 			
 			
