@@ -377,32 +377,32 @@
 				{
 					document.getElementById('vv1').innerHTML = countsObj[0];
 				    document.getElementById('vv1').style.color = "red";
-					document.getElementById('vv1').style.fontSize = "larger";
+					document.getElementById('vv1').style.fontSize = "xx-large";
 				}
 				
 				if (document.getElementById('vv2').innerHTML != countsObj[1])
 				{
 				    document.getElementById('vv2').innerHTML = countsObj[1];
 				    document.getElementById('vv2').style.color = "red";
-					document.getElementById('vv2').style.fontSize = "larger";
+					document.getElementById('vv2').style.fontSize = "xx-large";
 				}
 				
 				if (document.getElementById('vv3').innerHTML != countsObj[2])
 				{
 					document.getElementById('vv3').innerHTML = countsObj[2];
 				    document.getElementById('vv3').style.color = "red";
-					document.getElementById('vv3').style.fontSize = "larger";
+					document.getElementById('vv3').style.fontSize = "xx-large";
 				}
 				
 				
 				setTimeout(function()
 								    {
 					                   document.getElementById('vv1').style.color = "black";
-									   document.getElementById('vv1').style.fontSize = "normal";
+									   document.getElementById('vv1').style.fontSize = "medium";
 									   document.getElementById('vv2').style.color = "black";
-									   document.getElementById('vv2').style.fontSize = "normal";
+									   document.getElementById('vv2').style.fontSize = "medium";
 									   document.getElementById('vv3').style.color = "black";
-									   document.getElementById('vv3').style.fontSize = "normal";
+									   document.getElementById('vv3').style.fontSize = "medium";
 									}
 				           , 500);
 			}
