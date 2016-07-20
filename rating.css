@@ -5,14 +5,18 @@
 	margin-top: 0px;
 }*/
 
-
+.votes_value
+{
+	font-family: "Comic Sans MS", cursive, sans-serif;
+    font-size: 120%;
+	display: inline;
+}
 
 #votes_number
 {
 	font-family: "Comic Sans MS", cursive, sans-serif;
     font-size: 120%;
-	display: block;
-	/*margin-left: 50px;*/
+	display: inline;
 }
 
 #n_of_unique

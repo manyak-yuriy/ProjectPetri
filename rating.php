@@ -205,9 +205,9 @@
 	    <hr/>
 		<p id="votes_number">
 			Total number of votes: 
-			<?php echo $n_of_votes ?>
-			<br/>
 	    </p>
+		<span class="votes_value" id = "vv1"> </span>
+		</br>
 	    <div class="category-caption">
 		    <strong style="text-align: center; color: blue;">Интеллект</strong>
 	    </div>
@@ -251,9 +251,9 @@
 	    <hr/>
 		<p id="votes_number">
 			Total number of votes: 
-			<?php echo $n_of_votes ?>
-			<br/>
 	    </p>
+		<span class="votes_value" id = "vv2"> </span>
+		</br>
 	    <div class="category-caption">
 		    <strong style="text-align: center; color: red;">Сексуальность</strong>
 	    </div>
@@ -296,9 +296,9 @@
 	    <hr/>
 		<p id="votes_number">
 			Total number of votes: 
-			<?php echo $n_of_votes ?>
-			<br/>
 	    </p>
+		<span class="votes_value" id = "vv3"> </span>
+		</br>
 	    <div class="category-caption">
 		    <strong style="text-align: center; color: green;">Вероятность прихода к успеху</strong>
 	    </div>
@@ -349,5 +349,35 @@
 
 
 <script>
-    load_back();
+
+
+	load_back();
+	load_votes();
+	setInterval(load_votes, 3000);
+
+    
+	
+	
+	function load_votes()
+	{
+		var xmlhttp = new XMLHttpRequest();
+	    xmlhttp.onreadystatechange = function() 
+        {
+			if (xmlhttp.readyState == 4 && xmlhttp.status == 200) 
+            {
+				var resp = xmlhttp.responseText;
+				var str =  resp.slice(resp.indexOf("["), resp.lastIndexOf("]") + 1);
+				//alert(resp);
+				var countsObj = JSON.parse(str);
+				
+				document.getElementById('vv1').innerHTML = countsObj[0];
+				document.getElementById('vv2').innerHTML = countsObj[1];
+				document.getElementById('vv3').innerHTML = countsObj[2];
+			}
+			
+			
+		}
+		xmlhttp.open("GET", "numVotes.php", true);
+        xmlhttp.send();
+	}
 </script>

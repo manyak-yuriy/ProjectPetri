@@ -2,19 +2,45 @@
 
 require 'parts/DB_connect.php';  
 
-/* cat : category */
-$cat = $_GET["cat"];
+/* catergory:  */
 
-$sql = "SELECT COUNT(*) AS cnt FROM vote_queue;";
+$comp_votes = 0;
+$sql = "SELECT SUM(count) AS cnt FROM vote_cnt_comp;";
 $result = $conn->query($sql);
 
 if ($result->num_rows == 1) 
 {
     $row = $result->fetch_assoc();
-	$counter = $row['cnt'];
-	echo "{\"cnt\" : \"$counter\"}";
+	$comp_votes = $row['cnt'];
 }
 
+$char_votes = 0;
+$sql = "SELECT SUM(count) AS cnt FROM vote_cnt_char;";
+$result = $conn->query($sql);
+
+if ($result->num_rows == 1) 
+{
+    $row = $result->fetch_assoc();
+	$char_votes = $row['cnt'];
+}
+
+$mann_votes = 0;
+$sql = "SELECT SUM(count) AS cnt FROM vote_cnt_mann;";
+$result = $conn->query($sql);
+
+if ($result->num_rows == 1) 
+{
+    $row = $result->fetch_assoc();
+	$mann_votes = $row['cnt'];
+}
+
+
+
+echo '[';
+echo    "\"$comp_votes\",";
+echo    "\"$char_votes\",";
+echo    "\"$mann_votes\"";
+echo "]";
 ?>
 
 <?php
