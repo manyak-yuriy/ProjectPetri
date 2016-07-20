@@ -12,6 +12,12 @@
 	margin-left: 5px;
 }
 
+#access
+{
+	position: absolute;
+	right: 200px;
+}
+
 
 #accepted_image
 {

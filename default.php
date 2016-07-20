@@ -38,9 +38,10 @@
 	</br>
 	</br>
 	
-	<span id="access_caption"> Total accesses: </span>
-	<span id="access_num"> </span>
-	
+	<div id = "access">
+	   <span id="access_caption"> Total accesses: </span>
+	   <span id="access_num"> </span>
+	</div>
 	<?php
 	    require 'parts/lower_bar.php';
 	?>
