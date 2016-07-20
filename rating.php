@@ -355,7 +355,7 @@
 
 	load_back();
 	load_votes();
-	setInterval(load_votes, 3000);
+	setInterval(load_votes, 5000);
 
     
 	
@@ -377,21 +377,21 @@
 				{
 					document.getElementById('vv1').innerHTML = countsObj[0];
 				    document.getElementById('vv1').style.color = "red";
-					document.getElementById('vv1').style.fontSize = "xx-large";
+					document.getElementById('vv1').style.fontSize = "x-large";
 				}
 				
 				if (document.getElementById('vv2').innerHTML != countsObj[1])
 				{
 				    document.getElementById('vv2').innerHTML = countsObj[1];
 				    document.getElementById('vv2').style.color = "red";
-					document.getElementById('vv2').style.fontSize = "xx-large";
+					document.getElementById('vv2').style.fontSize = "x-large";
 				}
 				
 				if (document.getElementById('vv3').innerHTML != countsObj[2])
 				{
 					document.getElementById('vv3').innerHTML = countsObj[2];
 				    document.getElementById('vv3').style.color = "red";
-					document.getElementById('vv3').style.fontSize = "xx-large";
+					document.getElementById('vv3').style.fontSize = "x-large";
 				}
 				
 				

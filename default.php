@@ -55,7 +55,7 @@
     onload = function()
 	{
 		load_access();
-		setInterval(load_access, 3000);
+		setInterval(load_access, 5000);
 				
 			
 		if (!XMLHttpRequest)
