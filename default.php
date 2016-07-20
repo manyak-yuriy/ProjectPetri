@@ -99,8 +99,10 @@
 	
 	
    function load_access()
-   {
+   { 
+        
 	    var xmlhttp = new XMLHttpRequest();
+		
 	    xmlhttp.onreadystatechange = function() 
         {
 			if (xmlhttp.readyState == 4 && xmlhttp.status == 200) 
@@ -109,7 +111,18 @@
 				//alert(resp);
 				var counterObj = JSON.parse(resp);
 				var counter = counterObj['cnt'];
-				document.getElementById('access_num').innerHTML = counter;
+				
+				if (document.getElementById('access_num').innerHTML != counter)
+				{
+					document.getElementById('access_num').innerHTML = counter;
+				    document.getElementById('access_num').style.color = "red";
+				}
+				
+				setTimeout(function()
+								    {
+					                   document.getElementById('access_num').style.color = "black";
+									}
+				           , 500);
 			}
 			
 			
