@@ -3,6 +3,7 @@
 
 <head>
     <meta http-equiv="refresh" content="0; url=http://projectpetri.eu.pn/default.php" />
+	<!-- -->
 
     <link rel="stylesheet" type="text/css" href="style.css">
 	
