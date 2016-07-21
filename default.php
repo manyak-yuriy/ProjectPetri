@@ -169,22 +169,22 @@
                 
 				id = links[2];
 				
-				var question = "Кто из пацанов";
+				var question = "Who is more ";
 				switch (links[3])
 				{
 					case "1":
 					{
-						question = question + "<span id = 'question_text-comp'> умнее</span>";
+						question = question + "<span id = 'question_text-comp'> competent</span>";
 						break;
 					}
 					case "2":
 					{
-						question = question + "<span id = 'question_text-char'> сексуальнее</span>";
+						question = question + "<span id = 'question_text-char'> charismatic</span>";
 						break;
 					}
 					case "3":
 				    {
-						question = question + "<span id = 'question_text-mann'> придёт к упеху</span>";
+						question = question + "<span id = 'question_text-mann'> well-mannered</span>";
 						break;
 					}
 					default:

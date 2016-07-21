@@ -209,7 +209,7 @@
 		<span class="votes_value" id = "vv1"> </span>
 		</br></br>
 	    <div class="category-caption">
-		    <strong style="text-align: center; color: blue;">Интеллект</strong>
+		    <strong style="text-align: center; color: blue;">Competence</strong>
 	    </div>
 	
 	    <div class="cup-person-pair">
@@ -256,7 +256,7 @@
 		</br>
 		</br>
 	    <div class="category-caption">
-		    <strong style="text-align: center; color: red;">Сексуальность</strong>
+		    <strong style="text-align: center; color: red;">Charisma</strong>
 	    </div>
 	
 	    <div class="cup-person-pair">
@@ -302,7 +302,7 @@
 		</br>
 		</br>
 	    <div class="category-caption">
-		    <strong style="text-align: center; color: green;">Вероятность прихода к успеху</strong>
+		    <strong style="text-align: center; color: green;">Manners</strong>
 	    </div>
 	
 	    <div class="cup-person-pair">
