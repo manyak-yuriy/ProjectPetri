@@ -1,26 +1,5 @@
 <?php
 $arrSources = array(
-<<<<<<< HEAD
-/*0*/   "new_img/erokhin.jpg",
-/*1*/   "new_img/deundiak.jpg",
-/*2*/   "new_img/fridman.jpg",
-/*3*/   "new_img/gritsaiuk.jpg",
-/*4*/   "new_img/belas.jpg",
-/*5*/   "new_img/mikhailuk.png",
-/*6*/   
-/*7*/   "new_img/manyak.png",
-"new_img/livinskiy.jpg",
-"new_img/puhachev.jpg",
-"new_img/morugiy.jpg",
-"new_img/rohovoy.jpg",
-"new_img/sagan.jpg",
-"new_img/skorohod.jpg",
-"new_img/sliota.jpg",
-"new_img/tarasiuk.jpg",
-"new_img/varava.jpg",
-"new_img/yakovets.jpg", 
-"new_img/romanko.jpg"
-=======
 /*0*/   "http://img1.rnkr-static.com/user_node_img/30/585095/C350/bill-gates-writers-photo-u4.jpg",
 /*1*/   "http://img1.rnkr-static.com/node_img/77/1528625/C350/mark-zuckerberg-all-people-photo-1.jpg",
 /*2*/   "http://img2.rnkr-static.com/node_img/105/2098603/C350/steve-wozniak-writers-photo-1.jpg",
@@ -33,7 +12,7 @@ $arrSources = array(
 /*9*/  "http://img3.rnkr-static.com/user_node_img/32/626213/C350/brian-kernighan-writers-photo-u1.jpg",
 /*10*/  "http://img1.rnkr-static.com/node_img/56/1110152/C350/guido-van-rossum-writers-photo-1.jpg",
 /*11*/  "http://img2.rnkr-static.com/node_img/71/1413986/C350/larry-wall-writers-photo-1.jpg"
->>>>>>> 1c0a71f... Changes refs to images to prog faces.
+
 );
 
     $servername = 'fdb5.freehostingeu.com';
