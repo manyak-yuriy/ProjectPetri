@@ -4,11 +4,11 @@
 <head>
 
     <link rel="stylesheet" type="text/css" href="style.css">
+	
 	<link rel="stylesheet" type="text/css" href="default.css">
+	
 	<link rel="icon" href="http://binjiesun.com/images/voteIcon.png">
-	
 	<meta charset="UTF-8">
-	
     <title>Vote</title>
 	
 </head>
@@ -42,14 +42,12 @@
 	   <span id="access_caption"> Total accesses: </span>
 	   <span id="access_num"> </span>
 	</div>
-	
 	<?php
 	    require 'parts/lower_bar.php';
 	?>
 
 </body>
 
-<<<<<<< HEAD
 <script>
    
 
@@ -229,8 +227,5 @@
 	
 	load_back();
 </script>
-=======
-<script scr="js/default.js" type="text/javascript"> </script>
->>>>>>> cb87513... Rearranged scriptes in folders
 
 </html>
