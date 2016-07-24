@@ -1,60 +1,4 @@
-<!DOCTYPE html>
-<html>
-
-<head>
-
-    <link rel="stylesheet" type="text/css" href="style.css">
-	<link rel="stylesheet" type="text/css" href="default.css">
-	<link rel="icon" href="http://binjiesun.com/images/voteIcon.png">
-	
-	<meta charset="UTF-8">
-	
-    <title>Vote</title>
-	
-</head>
-
-<body>
-
-    <div id="menu">
-	    <img id="logo" alt="atom" src="http://animations.fg-a.com/atom_004rd.gif"> 
-	    <a class="menu-item" href="rating.php"><img width="25px" src="http://icons.iconarchive.com/icons/double-j-design/diagram-free/128/bar-chart-icon.png">&nbspRating</a>
-		<a class="menu-item" style="background-color: #6C2DC7;"><img width="32px" src="http://binjiesun.com/images/voteIcon.png">&nbspVote</a>
-		<a class="menu-item" href="about.php"><img width="25px" src="http://findicons.com/files/icons/1676/primo/128/info_black.png">&nbspAbout</a>
-		<a class="menu-item" href="feedback.php"><img width="25px" src="http://myexpressions.in/images/contact-icon.png">&nbspFeedback</a>
-	</div>
- 
-    <div id="qarea">
-          <h3 id="question_text">  </h3>
-          <img id="next_image" alt = "Next->" src="http://i.imgur.com/ekOT9KX.png" onclick = "load_next()"> <br\>
-  
-          <img id="img1" alt = "Wait..." onclick="send_vote(1); accept(); setTimeout(restore, 1000);">
-          <img id="img2" alt = "Wait..." onclick="send_vote(2); accept(); setTimeout(restore, 1000);">
-          
-		  <img id="accepted_image" alt = "Accepted!" src="http://www.livinglifeonthevine.com/wp-content/uploads/2014/09/Accept.png">
-		  <img id="loader_gif" alt = "Loading..." src="http://i.imgur.com/r3XJYzU.gif">
-
-    </div>
-	
-	</br>
-	</br>
-	
-	<div id = "access">
-	   <span id="access_caption"> Total accesses: </span>
-	   <span id="access_num"> </span>
-	</div>
-	
-	<?php
-	    require 'parts/lower_bar.php';
-	?>
-
-</body>
-
-<<<<<<< HEAD
-<script>
-   
-
-
-    onload = function()
+onload = function()
 	{
 		load_access();
 		setInterval(load_access, 5000);
@@ -171,22 +115,22 @@
                 
 				id = links[2];
 				
-				var question = "Кто из пацанов";
+				var question = "Who is more ";
 				switch (links[3])
 				{
 					case "1":
 					{
-						question = question + "<span id = 'question_text-comp'> умнее</span>";
+						question = question + "<span id = 'question_text-comp'> competent</span>";
 						break;
 					}
 					case "2":
 					{
-						question = question + "<span id = 'question_text-char'> сексуальнее</span>";
+						question = question + "<span id = 'question_text-char'> charismatic</span>";
 						break;
 					}
 					case "3":
 				    {
-						question = question + "<span id = 'question_text-mann'> придёт к упеху</span>";
+						question = question + "<span id = 'question_text-mann'> well-mannered</span>";
 						break;
 					}
 					default:
@@ -228,9 +172,3 @@
 	
 	
 	load_back();
-</script>
-=======
-<script scr="js/default.js" type="text/javascript"> </script>
->>>>>>> cb87513... Rearranged scriptes in folders
-
-</html>
